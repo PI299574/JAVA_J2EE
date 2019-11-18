@@ -44,6 +44,7 @@ public class CountNodesLeafNodesHalfLeafNodes {
 		return CountLeafNodes(root.leftChild) + CountLeafNodes(root.rightChild);
 	}
 
+	@SuppressWarnings("unused")
 	private static int CountHalfLeafNodes(TreeNode root) {
 		// TODO Auto-generated method stub
 		if(null==root){

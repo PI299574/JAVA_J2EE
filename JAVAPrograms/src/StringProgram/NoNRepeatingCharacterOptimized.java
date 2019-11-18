@@ -1,9 +1,31 @@
 package StringProgram;
 
+
+
 import java.util.HashSet;
 import java.util.Scanner;
 
-/*Approach:
+class B{
+
+}
+interface C{
+
+}
+interface D{
+
+}
+class a extends B implements C ,D{
+
+}
+
+
+/*
+ *
+ *  for input "abca", the output is 3 as "abc" is the longest substring with all distinct characters.
+abababcdefababcdab = 6
+geeksforgeeks = 7
+ *
+ * Approach:
 	 We use HashSet to store the characters in current window [i,j)[i, j)[i,j) (j=ij = ij=i initially).
 	 Then we slide the index jjj to the right. If it is not in the HashSet, we slide jjj further.
 	 Doing so until s[j] is already in the HashSet. At this point, we found the maximum size
