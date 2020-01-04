@@ -7,9 +7,9 @@ public class ParenthesisChecker {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//String exp = "[()]{}{[()()]()}";
+		String exp = "[()]{}{[()()]()}";
 
-		String exp = "[(])";
+		//String exp = "[(])";
 
 		boolean checker = parenthesisChecker(exp);
 		System.out.println(checker);
