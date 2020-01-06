@@ -21,7 +21,7 @@ BinarySearchTree tree=new BinarySearchTree();
   tree.insert(60);
   tree.insert(80);
   boolean b=ISBST(tree.root,Integer.MIN_VALUE,Integer.MAX_VALUE);
-  if(b==true) System.out.println("Binasry search tree");
+  if(b==true) System.out.println("Binary search tree");
   else System.out.println("Not a Binary Search Tree");
 }
 

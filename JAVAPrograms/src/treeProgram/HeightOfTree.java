@@ -20,7 +20,7 @@ BinarySearchTree tree=new BinarySearchTree();
   tree.insert(70);
   tree.insert(60);
   tree.insert(80);
-  tree.insert(100);
+  //tree.insert(100);
   int height=Height(tree.root);
   System.out.println("Height is "+height);
   

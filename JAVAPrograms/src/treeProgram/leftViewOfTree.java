@@ -59,16 +59,13 @@ public class leftViewOfTree {
 			TreeNode current=null;
 
 			while(!queue.isEmpty()){
-
 				int n=queue.size();
 				System.out.println("Size of queue= "+n);
-				for(int i=1;i<=i;i++){
+				for(int i=1;i<=n;i++){
 					current=queue.poll();
-					if(i==n) {
+					if(i==1) {
 						System.out.print(current.data+" ");
 					}
-
-
 					if(null!=current.leftChild){
 						queue.add(current.leftChild);
 					}
