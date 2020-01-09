@@ -20,9 +20,9 @@ public class PairWiseSwapLinkedList {
 		list.inserAtLast(40);
 		list.inserAtLast(50);
 		list.inserAtLast(60);
-		list.display();
+		list.display(list.head);
 		pairwiseSwapViaDatA(list.head);
-		list.display();
+		list.display(list.head);
 
 		pairwiseSwapViaNode(list.head);
 

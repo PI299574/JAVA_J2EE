@@ -25,7 +25,7 @@ class LinkedList{
 		}
 	}
 
-	public void display(){
+	public void display(Node head){
 		Node current =head;
 		while(null!=current){
 			System.out.print(current.data+" ");
@@ -50,7 +50,7 @@ public class LinkedListApp {
 		list.inserAtLast(30);
 		list.inserAtLast(40);
 		list.inserAtLast(50);
-		list.display();
+		list.display(list.head);
 
 	}
 

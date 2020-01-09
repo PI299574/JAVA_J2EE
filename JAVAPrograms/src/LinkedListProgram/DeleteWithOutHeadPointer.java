@@ -16,10 +16,11 @@ public class DeleteWithOutHeadPointer {
 		list.inserAtLast(30);
 		list.inserAtLast(40);
 		list.inserAtLast(50);
-		list.display();
+		list.display(list.head);
 
 		deleteGivenNode(list.head.next.next);//deleting 3rd node //30
-		list.display();
+		list.display(list.head);
+		
 
 
 	}
