@@ -28,7 +28,7 @@ public class SortAnArray012 {
 			1. create 2 pointer low and high point to first and last elemnt.
 			2. create a mid pointer , point to first elemnt.
 			3. if arr[mid] == 2...swap(arr[mid],arr[high])...decrement high--.
-			4. if arr[mid] == 0 ...swap(arr[mid],arr[high])...increment mid++, low++;
+			4. if arr[mid] == 0 ...swap(arr[mid],arr[low])...increment mid++, low++;
 			5. if arr[mid] == 1 ...do nothing...just increment mid++;
 	*/
 		
