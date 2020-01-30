@@ -68,7 +68,6 @@ static class QueueNode{
 					queue.add(adjecent_Point);
 					
 				}
-				
 			}
 
 		}
