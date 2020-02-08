@@ -2,7 +2,14 @@ package GraphProgram;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+/*
+Given a directed graph, a source vertex ‘s’ and a destination vertex ‘d’, print all paths from given ‘s’ to ‘d’. 
 
+The idea is to do Depth First Traversal of given directed graph. Start the traversal from source. 
+Keep storing the visited vertices in an array say ‘path[]’. If we reach the destination vertex,
+ print contents of path[]. The important thing is to mark current vertices in path[]
+ as visited also, so that the traversal doesn’t go in a cycle. 
+ */
 class PathGraph{
 	int noOfVertex;
 	LinkedList<Integer> adjencyList[];
