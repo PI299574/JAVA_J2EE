@@ -1,8 +1,8 @@
 package LinkedListProgram;
 
-class LinkedList{
 
-	class Node{
+class LinkedList{
+	static class Node{
 		int data ;
 		Node next;
 		public Node(int data) {
@@ -11,6 +11,7 @@ class LinkedList{
 			this.next = null;
 		}
 	}
+	
 	Node head;
 	public void inserAtLast(int data){
 		Node newNode=new Node(data);
