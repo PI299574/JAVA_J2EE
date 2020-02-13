@@ -51,7 +51,7 @@ public class SubarraySumZero {
 			if(map.containsKey(curr_sum-sum)){
 				result=result+map.get(curr_sum-sum);
 			}
-			//if current sum is presnt in map then icrement it by 1 or 1st time make caount value=1
+			//if current sum is presnt in map then increment it by 1 or 1st time make caount value=1
 			if(map.containsKey(curr_sum)){
 				map.put(curr_sum, map.get(curr_sum)+1);
 			}

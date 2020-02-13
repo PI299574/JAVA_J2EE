@@ -5,9 +5,9 @@ public class WaterTrappingProblem {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = {0, 1, 0, 2, 1, 0, 1,3, 2, 1, 2, 1}; 
+		//int arr[] = {0, 1, 0, 2, 1, 0, 1,3, 2, 1, 2, 1}; 
 
-		//int arr[]   = {3, 0, 0, 2, 0, 4};
+		int arr[]   = {3, 0, 0, 2, 0, 4};
 		
 		//int arr[] = {2, 0, 2};
    int n = arr.length; 
@@ -30,17 +30,19 @@ public class WaterTrappingProblem {
 					left_max=arr[left];
 				}else{
 					water=water+left_max-arr[left];
-					left++;
+					
 				}
+				left++;
 			}
-			
+			else{
 			if(arr[right]>right_max){
 				right_max=arr[right];
 			}else{
 				water=water+right_max-arr[right];
-				right--;
+				
 			}
-			
+			right--;
+			}
 		}
 		
 		return water;

@@ -91,6 +91,27 @@ class HashMap<K, V>{
 		
 	}
 	
+	
+	public K contains(K key){
+		
+		int hashKey=hash(key);
+		if(table[hashKey]==null){
+			return null;
+		}
+		else{
+			Entry<K,V> current = table[hashKey];
+			while(current!=null){
+				if(current.key.equals(key)){
+					return key;
+				}
+				current=current.next;
+			}
+		}
+		return null;
+		
+	}
+	
+	
 	private int hash(K newKey) {
 		// TODO Auto-generated method stub
 		return Math.abs(newKey.hashCode()%16);
