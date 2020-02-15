@@ -1,5 +1,7 @@
 package LinkedListProgram;
 
+import LinkedListProgram.LinkedList.Node;
+
 
 class LinkedList{
 	static class Node{
@@ -34,6 +36,8 @@ class LinkedList{
 		}
 		System.out.println("");
 	}
+
+	
 }
 
 
