@@ -1,10 +1,13 @@
 package DP;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
 /*
  https://www.youtube.com/watch?v=PwDqpOMwg6U&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr&index=40
  https://www.techiedelight.com/calculate-sum-elements-sub-matrix-constant-time/
+ 
+ (sum[i][j])From 00 to ij=mat[i-1][j-1]+sum[i][j-1]+sum[i-1][j]-sum[i-1][j-1];
+ 
+ (Sum)from r1,c1 to r2,c2)= sum[r2][c2]-sum[r2][c1-1]-sum[r1-1][c2]+sum[r1-1][c1-1]
+ 
  */
 public class SumOfAllSubMatrixOfAMatrix {
 
