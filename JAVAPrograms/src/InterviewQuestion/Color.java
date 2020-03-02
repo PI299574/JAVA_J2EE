@@ -1,4 +1,4 @@
-package InterviewQuestion.collections;
+package InterviewQuestion;
 
 public class Color {
 

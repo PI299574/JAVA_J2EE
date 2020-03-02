@@ -1,4 +1,4 @@
-package InterviewQuestion.collections;
+package InterviewQuestion;
 
 import java.util.ArrayList;
 import java.util.HashMap;
