@@ -36,8 +36,8 @@ class PathGraph{
 		visted[source]=true;
 		if(source==dest){
 			System.out.println(list);
-			//visted[source]=false;
-			//return;
+			visted[source]=false;
+			return;
 		}
 		for(int data: adjencyList[source]){
 			if(!visted[data]){

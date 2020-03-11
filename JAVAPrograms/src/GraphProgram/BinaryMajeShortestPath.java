@@ -38,7 +38,7 @@ static class QueueNode{
 		
 		boolean visited[][] = new boolean[ROW][COL];
 		
-		if(matrix[src.xRow][src.yRow]!=1 && matrix[src.xRow][src.yRow]!=1){
+		if(matrix[src.xRow][src.yRow]!=1 && matrix[dest.xRow][dest.yRow]!=1){
 			return -1;
 		}
 		System.out.println("111111111111111");
