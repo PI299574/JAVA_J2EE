@@ -90,6 +90,49 @@ you don't have a reference setup or project. Spring Initializer addresses this p
 It's nothing but a web application which helps you to create initial Spring boot project structure and provides Maven
 or Gradle build file to build your code.
 
+New Apring starter Project needs below detials.
+    GroupID: project coordinates (id of the project’s group, as referred by the groupId attribute in Apache Maven). 
+    Also infers the root package name to use.
+
+    Artifact: project coordinates (id of the artifact, as referred by the artifactId attribute in Apache Maven). 
+    Also infers the name of the project
+
+    Name: display name of the project that also determines the name of your Spring Boot application. For instance,
+     if the name of your project is my-app, the generated project will have a MyAppApplication class
+
+    Description: description of the project
+
+    Package Name: root package of the project. If not specified, the value of the Group attribute is used
+
+    Packaging: project packaging (as referred by the concept of the same name in Apache Maven). 
+    start.spring.io can generate jar or war projects
+
+    Java: the Java version to use
+
+
+Guide to naming conventions on groupId, artifactId, and version
+
+    groupId uniquely identifies your project across all projects. A group ID should follow Java's package name rules. 
+    This means it starts with a reversed domain name you control. For example,
+
+    org.apache.maven, org.apache.commons
+
+    Maven does not enforce this rule. There are many legacy projects that do not follow this convention and instead 
+    use single word group IDs. However, it will be difficult to get a new single word group ID approved for inclusion in the 
+    Maven Central repository.
+
+    You can create as many subgroups as you want. A good way to determine the granularity of the groupId is to use the project structure. 
+    That is, if the current project is a multiple module project, it should append a new identifier to the parent's groupId.
+    For example,
+
+    org.apache.maven, org.apache.maven.plugins, org.apache.maven.reporting
+    artifactId is the name of the jar without version. If you created it, then you can choose whatever name you want with lowercase letters and no strange symbols. If it's a third party jar, you have to take the name of the jar as it's distributed.
+
+    eg. maven, commons-math
+    version if you distribute it, then you can choose any typical version with numbers and dots (1.0, 1.1, 1.0.1, ...). Don't use dates as they are usually associated with SNAPSHOT (nightly) builds. If it's a third party artifact, you have to use their version number whatever it is, and as strange as it can look. For example,
+
+    2.0, 2.0.1, 1.3.1
+    
 7. What is Spring Actuator? What are its advantages?
 This is an interesting Spring Boot question and mostly asked on Java roles which also has some support responsibility.
 Spring Actuator is another cool Spring Boot feature which allows seeing inside a running application.
