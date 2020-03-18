@@ -40,7 +40,8 @@ Array / Array List
 Linked List
 Vector (rarely asked)
 Hash Map
-hash Table 
+hash Table  
+
 Linked Hash Map
 Tree Map
 Sorted Map
