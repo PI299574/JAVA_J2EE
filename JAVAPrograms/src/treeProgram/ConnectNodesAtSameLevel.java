@@ -71,7 +71,7 @@ System.out.println("nextRight of "+  root.right.right.data+" is "+
             // node at current Level  
 			if(current!=null){
 				current.nextRight=queue.peek();   ///IMP
-			}
+			
 			
 			if(null!=current.left){
 				queue.add(current.left);
@@ -81,6 +81,8 @@ System.out.println("nextRight of "+  root.right.right.data+" is "+
 			}
 			// if queue is not empty, push NULL to mark  
             // nodes at this level are visited 
+			
+			}
 			else if(!queue.isEmpty()){   //IMP
 				queue.add(null);
 			}
