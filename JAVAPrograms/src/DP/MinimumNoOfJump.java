@@ -32,9 +32,9 @@ public class MinimumNoOfJump {
 		jump[0] = 0; 
 		  
 		for(int i=1;i<arr.length;i++){
-			jump[i]=-1;
+			jump[i]=99999;
 			for(int j=0;j<=i;j++){
-				if(j+arr[j]>=i && jump[j]!=-1){
+				if(j+arr[j]>=i && jump[j]!=99999){
 					jump[i]=Math.min(jump[j]+1, jump[i]);
 					break;
 				}

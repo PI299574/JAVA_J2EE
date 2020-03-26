@@ -1,5 +1,6 @@
 package FamousProblem;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -69,6 +70,12 @@ System.out.println("************"+no);
 		
 		for(int[] i:Arrays.asList(result)){
 			System.out.println(i);
+		}
+		for(int[] i:Arrays.asList(result)){
+			for(int k1:i){
+				System.out.print(k1+" ");
+			}
+			System.out.println();
 		}
 		return result[n][k];
 	}

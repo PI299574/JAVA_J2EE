@@ -15,30 +15,24 @@ public class MaximumSumIncreasingSubsequence {
 
 	private static int maxSumIS(int[] arr, int n) {
 		// TODO Auto-generated method stub
-		
-		int currentMax;
-		int maxSum=0;
-		ArrayList<Integer> list=new  ArrayList<>();
-		for(int i=0;i<n;i++){
-			currentMax=Integer.MIN_VALUE;
-			for(int j=i;j<n;j++){
-				if(currentMax<arr[j]){
-					currentMax=arr[j];
-					list.add(arr[j]);
-				}
+	int[] dp=new int[n]; //contain sum at each element , same like LIS count
+	
+	for(int i=0;i<n;i++){
+		dp[i]=arr[i];
+	}
+	for(int i=1;i<n;i++){
+		for(int j=0;j<=i;j++){
+			if(arr[i]>arr[j]  && dp[i]<(arr[i]+dp[j])){
+				dp[i]=arr[i]+dp[j];
 			}
-			int sum=0;
-			System.out.println(list);
-			for(Integer i1: list){
-				sum=sum+i1;
-			}
-			System.out.println(sum);
-			if(maxSum<sum){
-				maxSum=sum;
-			}
-			list.clear();
 		}
-		
+	}
+	int maxSum=0;
+	for(int i=0;i<n;i++){
+		System.out.print(dp[i]+" ");
+		maxSum=Math.max(maxSum, dp[i]);
+	}
+	System.out.println();
 		return maxSum;
 	}
 

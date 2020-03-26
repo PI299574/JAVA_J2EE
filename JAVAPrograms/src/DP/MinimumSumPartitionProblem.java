@@ -35,6 +35,7 @@ public class MinimumSumPartitionProblem {
 		// base case: if list becomes empty, return the absolute
 				// difference between two sets
 		if(n<0){
+			System.out.println("Abcs value ****"+Math.abs(sumPartition1-sumPartition2));
 			return Math.abs(sumPartition1-sumPartition2);
 		}
 		
@@ -42,11 +43,12 @@ public class MinimumSumPartitionProblem {
 		// Case 1. include current item in the subset S1 and recur
 		// for remaining items (n - 1)
 		int include=getMin(arr, n-1, sumPartition1+arr[n], sumPartition2);
-		
+		System.out.println("Includse "+include+" NNNNN*******"+n);
 		
 		// Case 2. exclude current item from subset S1 and recur for
 				// remaining items (n - 1)
 		int exclude=getMin(arr,  n-1,  sumPartition1, sumPartition2+arr[n]);
+		System.out.println("ewxclude "+exclude +" N&&&&&&&&"+n);
 		
 		return Math.min(include, exclude);
 	}
