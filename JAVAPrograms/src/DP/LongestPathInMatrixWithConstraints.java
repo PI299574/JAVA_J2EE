@@ -96,7 +96,4 @@ public class LongestPathInMatrixWithConstraints {
 		// TODO Auto-generated method stub
 		return (r<totalR0W && r>=0) && (c<totalCOL && c>=0);
 	}
-
-
-
 }
