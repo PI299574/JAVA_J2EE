@@ -30,7 +30,7 @@ public class SubarraySumZero {
 			arr[i]=sc.nextInt();
 		}*/
 		subArraySum(arr,n,k);
-		System.out.println("No of subArray present "+SubArraySum1(arr,n,k));
+		//System.out.println("No of subArray present "+SubArraySum1(arr,n,k));
 	}
 
 	private static int SubArraySum1(int[] arr, int n, int k) {
