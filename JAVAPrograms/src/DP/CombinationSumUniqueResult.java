@@ -51,6 +51,7 @@ public class CombinationSumUniqueResult {
 
 		private static void targetSum(int[] arr, int sum, int target, int start, ArrayList<Integer> list,ArrayList<ArrayList<Integer>> results) {
 			// TODO Auto-generated method stub
+			//System.out.println("Sum is 11111111**********"+sum);
 			if(sum>target){
 				return ;
 			}
@@ -64,8 +65,9 @@ public class CombinationSumUniqueResult {
 			}
 			int prev=-1;
 			for(int i=start;i<arr.length;i++){
-				if(prev!=arr[i]){
+				if(prev!=arr[i]){  //to remove duplicates
 				list.add(arr[i]);
+				//System.out.println("Sum is ****"+sum);
 				targetSum(arr, sum+arr[i], target, i+1, list,results);
 				list.remove(list.size()-1);
 				prev=arr[i];

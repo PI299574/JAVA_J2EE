@@ -54,6 +54,11 @@ public class Streamdemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		
+ 		List nums=Arrays.asList("String",11,"p",12,23,45);
+		
+ 		nums.stream.
+		
 		List<Integer> list=Arrays.asList(11,05,15,25,21);
 
 		//Demonstration of ForEach
@@ -93,4 +98,4 @@ public class Streamdemo {
 
 A stream consists of source followed by zero or more intermediate methods combined together
 (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
-Stream is used to compute elements as per the pipelined methods without altering the original value of the object.*/
+Stream is use d to compute elements as per the pipelined methods without altering the original value of the object.*/

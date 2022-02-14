@@ -127,25 +127,84 @@ Start the kakfa broker.
 
 Verify the broker has started with no issues by looking at the logs/kafkaServer.out log file
 
-What is Kafka? To handle a high volume of data and enables us to pass messages from one end-point to another, Apache Kafka is a distributed publish-subscribe messaging system. It is suitable for both offline and online message consumption. Basically, it designs a platform for high-end new generation distributed applications. It is an open source tool and is a part of Apache projects. One of the best features of Kafka is, it is highly available and resilient to node failures and supports automatic recovery. This feature makes Apache Kafka ideal for communication and integration between components of large-scale data systems in real-world data systems. Moreover, in order to prevent data loss, Kafka messages are persisted on the disk and replicated within the cluster. In addition, it is built on top of the ZooKeeper synchronization service. While it comes to real-time streaming data analysis, it can also integrate very well with Apache Storm and Spark.
+What is Kafka? To handle a high volume of data and enables us to pass messages from one end-point to another,
+ Apache Kafka is a distributed publish-subscribe messaging system. 
+ It is suitable for both offline and online message consumption. 
+ Basically, it designs a platform for high-end new generation distributed applications.
+ 
+  It is an open source tool and is a part of Apache projects. 
+  One of the best features of Kafka is, it is highly available and resilient to node failures and supports automatic recovery.
+   This feature makes Apache Kafka ideal for communication and integration between components of large-scale data systems 
+   in real-world data systems. Moreover, in order to prevent data loss, Kafka messages are persisted on the disk and 
+   replicated within the cluster. 
+   In addition, it is built on top of the ZooKeeper synchronization service.
+    While it comes to real-time streaming data analysis, it can also integrate very well with Apache Storm and Spark.
 
-    Kafka Broker There are one or more servers available in Apache Kafka cluster, basically, these servers (each) are what we call a broker. A Kafka server, a Kafka broker and a Kafka node all refer to the same concept and are synonyms.
+    Kafka Broker There are one or more servers available in Apache Kafka cluster, 
+    basically, these servers (each) are what we call a broker. 
+    A Kafka server, a Kafka broker and a Kafka node all refer to the same concept and are synonyms.
 
-    Kafka Topics A topic is a category of messages in Kafka. The producers publish the messages into topics and the consumers read the messages from topics. Data is stored in topics. A topic is divided into one or more partitions. In addition, all Kafka messages are generally organized into Kafka topics.
+    Kafka Topics A topic is a category of messages in Kafka. 
+    The producers publish the messages into topics and the consumers read the messages from topics.
+     Data is stored in topics. 
+     A topic is divided into one or more partitions.
+    In addition, all Kafka messages are generally organized into Kafka topics.
 
-    Kafka Partitions Kafka topics are divided into a number of partitions, which contains messages in an unchangeable sequence. Each message in a partition is assigned and identified by its unique offset. A topic can also have multiple partition logs like the click-topic has in the image to the right. This allows for multiple consumers to read from a topic in parallel.
+    Kafka Partitions :Kafka topics are divided into a number of partitions, 
+    which contains messages in an unchangeable sequence.
+     Each message in a partition is assigned and identified by its unique offset. 
+     A topic can also have multiple partition logs like the click-topic has in the image to the right.
+      This allows for multiple consumers to read from a topic in parallel.
 
-    Kafka Producers Producers are the publisher of messages to one or more Kafka topics. Producers send data to Kafka brokers. Every time a producer publishes a message to a broker, the broker simply appends the message to the last segment file. Actually, the message will be appended to a partition. Producer can also send messages to a partition of their choice.
+    Kafka Producers Producers are the publisher of messages to one or more Kafka topics. 
+    Producers send data to Kafka brokers
+    . Every time a producer publishes a message to a broker,
+     the broker simply appends the message to the last segment file. 
+     Actually, the message will be appended to a partition. 
+     Producer can also send messages to a partition of their choice.
 
-    Kafka Consumers Consumers read data from brokers. Consumers subscribes to one or more topics and consume published messages by pulling data from the brokers.
+    Kafka Consumers Consumers read data from brokers.
+     Consumers subscribes to one or more topics and consume published messages by pulling data from the brokers.
 
     Kafka offset
 
-    The offset is a unique identifier of a record within a partition. It denotes the position of the consumer in th
+    The offset is a unique identifier of a record within a partition.
+     It denotes the position of the consumer in th
 
+how to decide which consumer should read data first and from which partition?
+For such decisions, consumers within a group automatically use a 'GroupCoordinator'
+ and one 'ConsumerCoordinator', which assigns a consumer to a partition. 
+ This feature is already implemented in the Kafka. 
+Therefore, the user does not need to worry about it.
 
+Q; Kafka Rebalancing
 
+Rebalance is the re-assignment of partition ownership among consumers 
+within a given consumer group. Remember that every consumer in a consumer
+group is assigned one or more topic partitions exclusively.
 
+A Rebalance happens when:
+
+a consumer JOINS the group
+a consumer SHUTS DOWN cleanly
+a consumer is considered DEAD by the group coordinator. 
+This may happen after a crash or when the consumer is busy with a long-running 
+processing, which means that no heartbeats has been sent in the meanwhile by 
+\the consumer to the group coordinator within the configured session interval
+new partitions are added
+Being a group coordinator (one of the brokers in the cluster) and a group 
+leader (the first consumer that joins a group) designated for a consumer group, 
+Rebalance can be more or less described as follows:
+
+the leader receives a list of all consumers in the group from the group coordinator 
+(this will include all consumers that sent a heartbeat recently and which are 
+therefore considered alive) and is responsible for assigning a subset of partitions 
+to each consumer.
+After deciding on the partition assignment (Kafka has a couple built-in partition
+ assignment policies), the group leader sends the list of assignments to the group 
+ coordinator, which sends this information to all the consumers.
+
+This applies to Kafka 0.9, but I'm
 
 
 

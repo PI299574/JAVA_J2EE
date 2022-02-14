@@ -39,13 +39,13 @@ public class ReverseLinkedListInGroupOfSizeK {
 		// TODO Auto-generated method stub
 		Node next=null;Node prev = null;
 		Node current=head;
-		int x=k;
-		while(x>0 && current!=null){
+		int x=0;
+		while(x<k && current!=null){
 			next=current.next;
 			current.next=prev;
 			prev=current;
 			current=next;
-			x--;
+			x++;
 		}
 		if(next!=null){
 			head.next=reverse(next,k);

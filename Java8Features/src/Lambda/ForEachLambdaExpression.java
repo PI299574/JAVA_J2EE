@@ -1,6 +1,8 @@
 package Lambda;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class ForEachLambdaExpression {
 
@@ -19,6 +21,15 @@ public class ForEachLambdaExpression {
 		list.forEach((n)->{
 			System.out.println(n);
 		});
+		
+		System.out.println("Ascending order******");
+		list.stream().sorted().forEach(s->System.out.println(s));
+		
+		
+
+		System.out.println("Ascending order******");
+		list=(ArrayList<String>) list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		list.forEach(System.out::printf);
 	}
 
 }

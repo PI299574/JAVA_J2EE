@@ -25,11 +25,11 @@ public class SubsetSumProblem {
 			return false;
 		}
 		
-		if(sum<array[n-1]){
+		if(sum<array[n-1]){                          //do not include it 
 		return isSubsetSum(array, n-1, sum);	
 		}
 		else{
-		return isSubsetSum(array, n-1, sum) || isSubsetSum(array, n-1, sum-array[n-1])	;
+		return isSubsetSum(array, n-1, sum) || isSubsetSum(array, n-1, sum-array[n-1])	;  //nhi lo ya lo
 		}
 		
 	}

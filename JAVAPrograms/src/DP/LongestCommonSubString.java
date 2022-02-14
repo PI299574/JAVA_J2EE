@@ -34,9 +34,14 @@ Examples :
     
  Let m and n be the lengths of first and second strings respectively.
 
-A simple solution is to one by one consider all substrings of first string and for every substring check if it is a substring in second string. Keep track of the maximum length substring. There will be O(m^2) substrings and we can find whether a string is subsring on another string in O(n) time (See this). So overall time complexity of this method would be O(n * m2)
+A simple solution is to one by one consider all substrings of first string and for every substring 
+check if it is a substring in second string. Keep track of the maximum length substring.
+ There will be O(m^2) substrings and 
+ we can find whether a string is subsring on another string in O(n) time (See this).
+ So overall time complexity of this method would be O(n * m2)
 
-Dynamic Programming can be used to find the longest common substring in O(m*n) time. The idea is to find length of the longest common suffix for all substrings of both strings and store these lengths in a table.
+Dynamic Programming can be used to find the longest common substring in O(m*n) time.
+ The idea is to find length of the longest common suffix for all substrings of both strings and store these lengths in a table.
 
     The longest common suffix has following optimal substructure property.
 

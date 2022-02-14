@@ -11,7 +11,7 @@ public class ArrayWaterProblem {
 		Scanner sc=new Scanner(System.in);
 		//int n=sc.nextInt();
 		//int arr[]=new int[n];
-		int arr[]=new int[]{3,0,0,2,0,0,4};
+		int arr[]=new int[]{1,8,6,2,5,4,8,3,7};
 		int n=arr.length;
 		int low=0, lowMax=0;
 		int right=n-1,rightMax=0;

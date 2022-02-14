@@ -28,9 +28,11 @@ The implementation of these methods has to be provided in a separate class.
 So, if a new method is to be added in an interface then its implementation code
 has to be provided in the class implementing the same interface. To overcome this
 issue, Java 8 has introduced the concept of default methods which allow the 
-interfaces to have methods with implementation without affecting the classes that implement the interface.
+interfaces to have methods with implementation without affecting the classes that implement 
+the interface.
 
 
 The default methods were introduced to provide backward comparability so that existing
-intefaces can use the lambda expressions without implementing the methods in the implementation class. 
+intefaces can use the lambda expressions without implementing the methods in the implementation
+ class. 
 Default methods are also known as defender methods or virtual extension methods.*/

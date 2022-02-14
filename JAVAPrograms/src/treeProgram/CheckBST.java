@@ -33,6 +33,9 @@ BinarySearchTree tree=new BinarySearchTree();
 		if(root.data < minValue || root.data >maxValue){
 			return false;
 		}
+		
+		//max val of left subtree should be less than root
+		//min val of right subtree should be more than root
 		return ISBST(root.leftChild, minValue,root.data-1) && ISBST(root.rightChild,root.data+1, maxValue);
 	}
 	

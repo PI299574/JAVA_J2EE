@@ -1,7 +1,10 @@
 package java8.lambda;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class anStreamExample {
 
@@ -23,6 +26,11 @@ public class anStreamExample {
 				.filter(p->p.getLastName().startsWith("G"))
 				.count();
 		System.out.println(count1);
+		
+		
+		ArrayList<Person> plist=(ArrayList<Person>) list.stream().filter(p->p.getFirstName().equals("pintu")
+				).filter(p->p.getLastName().endsWith("Gpt")).collect(Collectors.toList());
+		System.out.println(plist);
 	}
 
 

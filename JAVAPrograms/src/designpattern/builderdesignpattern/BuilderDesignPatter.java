@@ -112,12 +112,15 @@ public User (String firstName, String lastName){ ...    }
 
 We will need some more like above. Still can manage? Now let’s introduce our sixth attribute i.e. salary. Now it is problem.
 
-One way it to create more constructors, and another is to loose the immutability and introduce setter methods. You choose any of both options, you loose something, right?
+One way it to create more constructors, and another is to loose the immutability and introduce setter methods. 
+You choose any of both options, you loose something, right?
 
 Here, builder pattern will help you to consume additional attributes while retaining the immutability of Use class.
 A sample implementation using Builder Pattern
 
-Below is the coded solution of problem we discussed above. This uses a additional class UserBuilder which helps us in building desired User object with all mandatory attributes and combination of optional attributes, without loosing the immutability.
+Below is the coded solution of problem we discussed above. This uses a additional class
+ UserBuilder which helps us in building desired User object with all mandatory attributes
+ and combination of optional attributes, without loosing the immutability.
 public class User
 {
     //All final attributes

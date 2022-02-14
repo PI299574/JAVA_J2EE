@@ -21,6 +21,9 @@ public class ForLoopExample {
 		//method reference
 		System.out.println("Usuing method reference example");
 		list.forEach(System.out::println);
+		
+		System.out.println("PPPPPPPPPPPpp");
+		list.stream().filter(p->p.getFirstName().equals("Anita")).forEach(p->System.out.println(p));
 	}
 
 }

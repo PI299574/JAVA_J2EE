@@ -4,18 +4,25 @@ public class ReflectionInJAVA {
 
 Reflection in Java
 
-Reflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.
+Reflection is an API which is used to examine or modify the behavior of
+ methods, classes, interfaces at runtime.
 
     The required classes for reflection are provided under java.lang.reflect package.
-    Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.
-    Through reflection we can invoke methods at runtime irrespective of the access specifier used with them.
+    Reflection gives us information about the class to which an object 
+    belongs and also the methods of that class which can be executed 
+    by using the object.
+    Through reflection we can invoke methods at runtime irrespective
+     of the access specifier used with them.
 
 reflection
 Reflection can be used to get information about –
 
-    Class The getClass() method is used to get the name of the class to which an object belongs.
-    Constructors The getConstructors() method is used to get the public constructors of the class to which an object belongs.
-    Methods The getMethods() method is used to get the public methods of the class to which an objects belongs.
+    Class The getClass() method is used to get the name of the class to which
+     an object belongs.
+    Constructors The getConstructors() method is used to get
+     the public constructors of the class to which an object belongs.
+    Methods The getMethods() method is used to get 
+    the public methods of the class to which an objects belongs.
 
 filter_none
 
@@ -170,13 +177,21 @@ Important observations :
      
 
     Advantages of Using Reflection:
-        Extensibility Features: An application may make use of external, user-defined classes by creating instances of extensibility objects using their fully-qualified names.
-        Debugging and testing tools: Debuggers use the property of reflection to examine private members on classes.
+        Extensibility Features: An application may make use of external,
+         user-defined classes by creating instances of extensibility 
+         objects using their fully-qualified names.
+         
+        Debugging and testing tools: Debuggers use the property of reflection to 
+        examine private members on classes.
 
      
 
     Drawbacks:
-        Performance Overhead: Reflective operations have slower performance than their non-reflective counterparts, and should be avoided in sections of code which are called frequently in performance-sensitive applications.
-        Exposure of Internals: Reflective code breaks abstractions and therefore may change behavior with upgrades of the platform
+        Performance Overhead: Reflective operations have slower performance
+         than their non-reflective counterparts, and should be avoided 
+         in sections of code which are called frequently in
+          performance-sensitive applications.
+        Exposure of Internals: Reflective code breaks abstractions
+         and therefore may change behavior with upgrades of the platform
 }
 */

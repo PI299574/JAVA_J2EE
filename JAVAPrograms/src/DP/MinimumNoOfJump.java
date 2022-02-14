@@ -41,6 +41,9 @@ public class MinimumNoOfJump {
 			}
 		}
 		
+		for(int i=0;i<jump.length;i++){
+			System.out.print(jump[i]+" ");
+		}
 		return jump[n-1];
 	}
 
